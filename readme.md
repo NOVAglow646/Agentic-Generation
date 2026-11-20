@@ -12,7 +12,7 @@
 | --- | --- |
 | [Code to 3D (to Video)](#code-to-3d-to-video) | 以可执行代码构建 3D 场景或世界，可进一步渲染为视频，或用代理视频引导视频生成模型；兼收相关 visual coding harness。 |
 | [Video to 3D](#video-to-3d) | 从参考视频重建可编辑的 3D 场景、动画或可执行程序，包括 video-to-code 评测。 |
-| [Text to 3D](#text-to-3d) | 从文本出发，通过资产、布局、相机、动画等工具编排生成 3D 内容，以场景构建为主要接口。 |
+| [Text to 3D (to Video)](#text-to-3d-to-video) | 从文本出发，通过资产、布局、相机、动画等工具编排生成 3D 内容，以场景构建为主要接口。 |
 | [Text to Video](#text-to-video) | 智能体围绕故事、镜头和视觉参考进行规划、检查与重试，调用 DiT 等视频生成模型完成生成。 |
 
 ### 分类与阅读说明
@@ -61,10 +61,11 @@
 
 ### 2026
 
-以下为使用现有智能体进行视频重建的评测基准，训练分类不适用。
+本节收录无需新增模型训练的视频重建框架与相关评测基准；Benchmark 的训练分类不适用。
 
 | 月份 | 工作 | 类型 / 范围 | 核心内容和insight | 资源 |
 | --- | --- | --- | --- | --- |
+| 11 | **MAVE: Reconstructing Editable 3D Blockouts from Film Shots** | 框架 · Video → 3D blockout | 视频→可编辑 Blender 白模。1️⃣用现成模型恢复相机、人物运动和深度，并统一到米制坐标系；2️⃣保持恢复的相机与人体姿态固定，由 agent 结合原视频和几何证据编程搭建环境，可调整人物尺度与支撑关系；3️⃣用深度冲突、几何覆盖、穿模和脚部支撑等检查反馈迭代修改。核心 insight：用专用模型的度量恢复和显式几何检查约束 agent，减少凭视觉猜测。另构建 MAVEBench（50 个镜头）和 MAVEData-3K（3,000 对白模-视频，待发布）。公开方法未新增模型训练；数据集面向后续训练。 | [论文](https://arxiv.org/abs/2611.22464) · [仓库（代码待发布）](https://github.com/yfChang-cv/MAVE) |
 | 10 | **CineRecon: Benchmarking Frontier Models for Agentic Cinematic Reconstruction** | Benchmark · Video → 3D | 测现有agent用blender复刻一段视频的能力。从相机、动态、静态三个维度测，前三名：opus5.5（76.6）、gpt6-astra（63.8）、kimi k3（52.4）。评测方法：使用绑定实体与时间的检查清单，由vlm比较时间对齐的参考帧和渲染帧，从相机、静态、动态一致性三个维度、11 类指标评分。 | [论文](https://arxiv.org/abs/2610.16577) |
 | 09 | **BVB: Benchmarking Agentic Video Understanding via Programmatic Reconstruction in Blender** | Benchmark · Video → Blender code | 测试模型能否通过 Blender 编程复刻一段视频。评估维度：1️⃣看一个vlm在渲染视频和原视频上都能答对的问题，占在原视频能答对的问题的比例；2️⃣看原视频和渲染视频的V-JEPA表征的相似度。两个指标都是越高越好。 | [论文](https://arxiv.org/abs/2609.15478) |
 
@@ -76,7 +77,7 @@
 ---
 
 
-# Text to 3D
+# Text to 3D (to Video)
 
 ## ❄️Training-free
 
