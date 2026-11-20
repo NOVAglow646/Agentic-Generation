@@ -1,0 +1,10 @@
+Generation tool: built-in image_gen
+
+Use case: stylized-concept.
+Asset type: polished landscape hero banner at the very beginning of a GitHub research repository README.
+Primary request: create one visually striking, refined banner for "Agentic Generation", a curated collection about agentic video generation, agentic 3D/world generation, code-to-video, video-to-code, and visual coding agents.
+Subject and scene: a coherent visual transformation between executable code, an editable 3D world, and generated video. Show a small elegant spatial scene transitioning from a precise wireframe/proxy representation into a fully rendered world, accompanied by restrained floating code-editor panels and a short filmstrip of consistent views of that same scene. Connect planning/code, execution, visual observation, and revision with thin, legible looping paths and small abstract agent nodes. Convey bidirectional reconstruction as well as generation. Make the 3D world the strong visual focal point; all panels and film frames must belong to this same visual concept.
+Style: sophisticated research-publication cover, beautifully lit 3D illustration blended with crisp technical linework, refined materials, restrained harmonious colors, strong typography, clear hierarchy, ample breathing room. Avoid generic AI brain artwork, robots, visual clutter, excessive neon, decorative unrelated objects, logos and watermarks.
+Composition: very wide horizontal banner, approximately 3:1 aspect ratio, suitable for display at GitHub README width. Balance a clearly readable title area with the detailed technical scene, leaving safe margins around all content. Make it engaging and understandable even at 900px display width.
+Text (verbatim): "AGENTIC GENERATION". Render this title perfectly spelled in a large elegant bold sans-serif font. The title is the only prose; code panels may use restrained programming glyphs and short code-like lines, with no additional slogans, tiny labels, or fabricated brand names.
+Output: a finished opaque raster banner, not a webpage mockup, no surrounding browser chrome.

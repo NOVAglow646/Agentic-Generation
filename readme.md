@@ -1,3 +1,5 @@
+![Agentic Generation：智能体通过编程与反馈迭代生成 3D 世界和视频](assets/agentic-generation-banner.png)
+
 # Agentic Generation
 
 收集 **Agentic Generation** 相关论文、项目与评测基准，关注智能体如何通过规划、编程、工具调用、执行反馈与迭代修正生成视觉内容。
